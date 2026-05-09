@@ -1,7 +1,5 @@
 node_modules/
 dist/
-.env
-.env.local
 .env.*.local
 *.log
 npm-debug.log*
@@ -10,3 +8,4 @@ npm-debug.log*
 .idea/
 coverage/
 *.tsbuildinfo
+config.bat
