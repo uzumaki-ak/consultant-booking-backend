@@ -7,9 +7,13 @@
   "scripts": {
     "dev": "nodemon --exec tsx src/server.ts",
     "build": "tsc",
+    "render-build": "npm ci --include=dev && npm run build",
     "start": "node dist/server.js",
     "seed": "tsx src/config/seed.ts",
     "type-check": "tsc --noEmit"
+  },
+  "engines": {
+    "node": "22.x"
   },
   "keywords": [
     "express",
