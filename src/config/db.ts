@@ -2,7 +2,10 @@
 // Crashes the process on failure so the orchestrator (PM2/Docker/Render) can restart it
 
 import mongoose from "mongoose";
+import { configureMongoDns } from "./dns.js";
 import { logger } from "../utils/logger.js";
+
+configureMongoDns();
 
 export const connectDB = async (): Promise<void> => {
   const uri = process.env.MONGODB_URI;

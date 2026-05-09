@@ -3,11 +3,15 @@
 // Run with: npm run seed
 
 import "dotenv/config";
+
 import mongoose from "mongoose";
+import { usePublicMongoDns } from "./dns.js";
 import { Expert } from "../models/Expert.js";
 import { Booking } from "../models/Booking.js";
 import type { ExpertCategory, ISlot } from "../types/index.js";
 import { logger } from "../utils/logger.js";
+
+usePublicMongoDns();
 
 interface SeedExpert {
   name: string;
